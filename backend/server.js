@@ -1,9 +1,8 @@
-//Atualize o servidor para usar rotas
-// Abra o arquivo server.js no backend e adicione a seguinte lógica para carregar as rotas e testar a conexão:
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
+require('dotenv').config();
 
 // Configurações iniciais
 dotenv.config();
@@ -11,12 +10,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Verifique se a variável de ambiente está carregada
+console.log('MONGO_URI:', process.env.MONGO_URI);
+
 // Conexão com MongoDB
 mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGO_URI)
   .then(() => console.log('Conectado ao MongoDB! 🎉'))
   .catch((err) => console.error('Erro ao conectar ao MongoDB:', err));
 
