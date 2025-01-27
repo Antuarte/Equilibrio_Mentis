@@ -1,0 +1,65 @@
+### Clonar um Repositório do GitHub
+
+1. **Instale o Git**:
+   - Se ainda não tiver o Git instalado, baixe e instale a partir do site oficial.
+
+2. **Clone o Repositório**:
+   - Abra o terminal (ou Git  no Windows).
+   - Navegue até o diretório onde deseja clonar o repositório.
+   - Use o comando `git clone` seguido da URL do repositório. Por exemplo:
+     ```
+     git clone https://github.com/Antuarte/Equilibrio_Mentis.git
+     ```
+
+### Fazer Modificações
+
+1. **Navegue até o Diretório do Repositório**:
+   - Use o comando `cd` para entrar no diretório do repositório clonado:
+     ```
+     cd C:\Users\Aline\OneDrive\Documentos\Equilibrio_Mentis
+     ```
+
+2. **Faça as Modificações**:
+   - Edite os arquivos conforme necessário usando seu editor de texto ou IDE preferido.
+
+### Subir as Modificações para o GitHub
+
+1. **Adicione as Modificações**:
+   - Adicione os arquivos modificados ao índice do Git:
+     ```
+     git add .
+     ```
+
+2. **Faça um Commit das Modificações**:
+   - Crie um commit com uma mensagem descritiva:
+     ```
+     git commit -m "Descrição das modificações"
+     ```
+
+3. **Suba as Modificações para o GitHub**:
+   - Envie as modificações para o repositório remoto:
+     ```
+     git push origin main
+     ```
+   - Substitua `main` pelo nome do branch que você está utilizando, se for diferente.
+
+### Resumo dos Comandos
+
+```
+# Clonar o repositório
+git clone https://github.com/usuario/nome-do-repositorio.git
+
+# Navegar até o diretório do repositório
+cd nome-do-repositorio
+
+# Fazer modificações nos arquivos
+
+# Adicionar modificações
+git add .
+
+# Fazer commit das modificações
+git commit -m "Descrição das modificações"
+
+# Subir modificações para o GitHub
+git push origin main
+```
