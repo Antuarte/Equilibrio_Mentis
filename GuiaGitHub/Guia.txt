@@ -1,56 +1,78 @@
-### Clonar um Repositório do GitHub
+### Como Clonar um Repositório do GitHub
 
 1. **Instale o Git**:
    - Se ainda não tiver o Git instalado, baixe e instale a partir do site oficial.
 
 2. **Clone o Repositório**:
-   - Abra o terminal (ou Git  no Windows).
-   - Navegue até o diretório onde deseja clonar o repositório.
-   - Use o comando `git clone` seguido da URL do repositório. Por exemplo:
+   - Abra o terminal (ou Git Bash no Windows).
+   - Navegue até o diretório onde deseja clonar o repositório:
+     ```bash
+     cd C:\Users\Aline\OneDrive\Documentos
      ```
+   - Use o comando `git clone` seguido da URL do repositório:
+     ```bash
      git clone https://github.com/Antuarte/Equilibrio_Mentis.git
      ```
 
-### Fazer Modificações
+### Como Fazer Modificações
 
 1. **Navegue até o Diretório do Repositório**:
    - Use o comando `cd` para entrar no diretório do repositório clonado:
-     ```
-     cd C:\Users\Aline\OneDrive\Documentos\Equilibrio_Mentis
+     ```bash
+     cd Equilibrio_Mentis
      ```
 
 2. **Faça as Modificações**:
    - Edite os arquivos conforme necessário usando seu editor de texto ou IDE preferido.
 
-### Subir as Modificações para o GitHub
+### Como Subir as Modificações para o GitHub
 
 1. **Adicione as Modificações**:
    - Adicione os arquivos modificados ao índice do Git:
-     ```
+     ```bash
      git add .
      ```
 
 2. **Faça um Commit das Modificações**:
    - Crie um commit com uma mensagem descritiva:
-     ```
+     ```bash
      git commit -m "Descrição das modificações"
      ```
 
-3. **Suba as Modificações para o GitHub**:
+3. **Configurar o Repositório Remoto**:
+   - Adicione o repositório remoto com o comando:
+     ```bash
+     git remote add origin https://github.com/Antuarte/Equilibrio_Mentis.git
+     ```
+
+4. **Verificar ou Mudar o Branch Atual**:
+   - Verifique qual branch você está utilizando. O GitHub mudou o branch padrão de `master` para `main`. Para verificar o branch atual:
+     ```bash
+     git branch
+     ```
+   - Se você estiver no branch `master`, você pode continuar com `master`. Caso contrário, mude para `main`:
+     ```bash
+     git branch -M main
+     ```
+
+5. **Subir as Modificações para o GitHub**:
    - Envie as modificações para o repositório remoto:
+     ```bash
+     git push -u origin main
      ```
-     git push origin main
+   - Ou, se estiver no branch `master`:
+     ```bash
+     git push -u origin master
      ```
-   - Substitua `main` pelo nome do branch que você está utilizando, se for diferente.
 
 ### Resumo dos Comandos
 
-```
+```bash
 # Clonar o repositório
-git clone https://github.com/usuario/nome-do-repositorio.git
+git clone https://github.com/Antuarte/Equilibrio_Mentis.git
 
 # Navegar até o diretório do repositório
-cd nome-do-repositorio
+cd C:\Users\Aline\OneDrive\Documentos\Equilibrio_Mentis
 
 # Fazer modificações nos arquivos
 
@@ -60,6 +82,12 @@ git add .
 # Fazer commit das modificações
 git commit -m "Descrição das modificações"
 
+# Adicionar repositório remoto
+git remote add origin https://github.com/Antuarte/Equilibrio_Mentis.git
+
+# Verificar ou mudar o branch atual
+git branch -M main
+
 # Subir modificações para o GitHub
-git push origin main
+git push -u origin main
 ```
